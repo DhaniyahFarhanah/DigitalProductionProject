@@ -15,8 +15,7 @@ public class interactable : MonoBehaviour
         {
             print("You hab oepend the duur");
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             print("u closd the duur");
         }
