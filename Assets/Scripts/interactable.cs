@@ -6,7 +6,7 @@ public class interactable : MonoBehaviour
 {
     void Start()
     {
-        
+        //idk
     }
 
     void Update()
@@ -15,7 +15,7 @@ public class interactable : MonoBehaviour
         {
             print("You hab oepend the duur");
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             print("u closd the duur");
         }
