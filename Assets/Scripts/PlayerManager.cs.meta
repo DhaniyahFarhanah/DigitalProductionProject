@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Assets/Scripts/interactable.cs.meta
-guid: 7a69aad30addf428d8bb33140a02fa7c
-=======
-guid: a8af3d4b87109405aa2420724e821321
->>>>>>> Stashed changes:Assets/Scripts/PlayerManager.cs.meta
+guid: 27cc0ed71a2ff470f9685cef075fa6c6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
