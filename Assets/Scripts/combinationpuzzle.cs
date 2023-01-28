@@ -10,6 +10,8 @@ public class combinationpuzzle : MonoBehaviour
     public static string playerCode = "";
 
     public static int totalDigits = 0;
+
+    public static string didClick = "n";
     
     void Start()
     {
@@ -22,13 +24,13 @@ public class combinationpuzzle : MonoBehaviour
         if(totalDigits == 4) {
             if (playerCode == correctCombi)
             {
-                Debug.Log("Yay");
+
             }
             else
             {
                 playerCode = "";
                 totalDigits = 0;
-                Debug.Log("lol try again");
+
             }
         }
     }
@@ -37,5 +39,28 @@ public class combinationpuzzle : MonoBehaviour
     {
         playerCode += gameObject.name;
         totalDigits += 1;
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 0);
+        StartCoroutine(waitToChange());
+        didClick = "y";
+    }
+
+    void OnMouseOver()
+    {
+        if (didClick == "n")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
+        }
+    }
+
+    void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+    }
+
+    IEnumerator waitToChange()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+        didClick = "n";
     }
 }
