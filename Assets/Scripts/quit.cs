@@ -18,7 +18,7 @@ public class quit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) //if user presses P
+        if (Input.GetKeyDown(KeyCode.Escape)) //if user presses Esc
         {
             if (isPaused)
             {

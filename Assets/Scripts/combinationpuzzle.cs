@@ -12,25 +12,32 @@ public class combinationpuzzle : MonoBehaviour
     public static int totalDigits = 0;
 
     public static string didClick = "n";
+
+    //public GameObject enterbutton;
     
     void Start()
     {
-         
+        //enterbutton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(totalDigits == 4) {
-            if (playerCode == correctCombi)
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (totalDigits == 4)
             {
+                if (playerCode == correctCombi)
+                {
 
-            }
-            else
-            {
-                playerCode = "";
-                totalDigits = 0;
+                }
 
+                else
+                {
+                    playerCode = "";
+                    totalDigits = 0;
+
+                }
             }
         }
     }

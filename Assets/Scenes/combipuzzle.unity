@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &10077352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -345,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &120683686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -469,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &250394837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -593,6 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &686165396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -885,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &991401750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1093,6 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &1712607440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1217,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &1827698345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1526,6 +1533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &1881198374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1650,6 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713b3bbdebe7642728c6eb0e68f19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterbutton: {fileID: 0}
 --- !u!61 &1991662739
 BoxCollider2D:
   m_ObjectHideFlags: 0
