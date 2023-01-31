@@ -29,14 +29,15 @@ public class combinationpuzzle : MonoBehaviour
             {
                 if (playerCode == correctCombi)
                 {
-
+                    playerCode = "";
+                    Debug.Log("Yay");
                 }
 
                 else
                 {
                     playerCode = "";
                     totalDigits = 0;
-
+                    Debug.Log("No");
                 }
             }
         }
