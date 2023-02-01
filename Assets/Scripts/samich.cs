@@ -13,6 +13,8 @@ public class samich : MonoBehaviour
     public string[] dialogue;
     private int index;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip dialogueTypingSoundClip;
 
     public float wordSpeed;
     public bool playerIsClose;
@@ -25,6 +27,11 @@ public class samich : MonoBehaviour
     float startingY; 
 
     int direction = 1;
+
+    private void Awake()
+    {
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -78,6 +85,7 @@ public class samich : MonoBehaviour
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
+            audioSource.PlayOneShot(dialogueTypingSoundClip);
             yield return new WaitForSeconds(wordSpeed);
         }
     }
