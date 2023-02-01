@@ -1963,7 +1963,8 @@ MonoBehaviour:
   dialogue:
   - ok it works
   - lmao niceeeee
-  dialogueTypingSoundClip: {fileID: 8300000, guid: ac7a937fafccf4fc8b272ef452784b22, type: 3}
+  dialogueTypingSoundClip: {fileID: 8300000, guid: 4ba7eeef7aafc45938c978af1319721f, type: 3}
+  stopAudioSource: 0
   wordSpeed: 0.1
   playerIsClose: 0
   start: 1
@@ -2930,37 +2931,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
---- !u!1 &1776599270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1776599271}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1776599271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776599270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5826209, y: 0.60604525, z: 0.5408599}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808704834
 GameObject:
   m_ObjectHideFlags: 0

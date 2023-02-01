@@ -15,6 +15,7 @@ public class samich : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip dialogueTypingSoundClip;
+    [SerializeField] private bool stopAudioSource;
 
     public float wordSpeed;
     public bool playerIsClose;
@@ -85,6 +86,10 @@ public class samich : MonoBehaviour
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
+            if (stopAudioSource)
+            {
+                audioSource.Stop();
+            }
             audioSource.PlayOneShot(dialogueTypingSoundClip);
             yield return new WaitForSeconds(wordSpeed);
         }
