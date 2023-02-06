@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStateManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerStateManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D playerRB;
     public GameObject dialogueBox;
+    public PlayerManager PManager;
 
     public float charSpeed;
     public float dirX;
@@ -33,10 +35,18 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerBaseState twerkState;
     internal PlayerBaseState killState;
 
+    public Image timerBar;
+    public float maxTime = 1f;
+    float remainingTime;
+
     void Start()
     {
         currentState = idleState;
         currentState.EnterState(this);
+        timerBar = GetComponentInChildren<Image>();
+        timerBar.enabled = false;
+        remainingTime = maxTime;
+        //PManager.GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -91,6 +101,27 @@ public class PlayerStateManager : MonoBehaviour
                 case PlayerHoldBreathState:
                 spriteRenderer.sprite = breath;
                 charSpeed = 2f;
+
+                if (remainingTime > 0 && Input.GetKeyDown(KeyCode.X))
+                {
+                    timerBar.enabled = true;
+                    remainingTime -= Time.deltaTime;
+                    timerBar.fillAmount = remainingTime / maxTime;
+                }
+
+                else if (remainingTime > 0 && Input.GetKeyUp(KeyCode.X))
+                {
+                    timerBar.enabled = false;
+                    Time.timeScale = 0;
+                }
+
+                else if (remainingTime == 0 && Input.GetKeyDown(KeyCode.X))
+                {
+                    timerBar.enabled = false;
+                    PManager.gameOverScreen.SetActive(true);
+                    Time.timeScale = 0;
+                }
+
                 break;
 
                 case PlayerEyesState:

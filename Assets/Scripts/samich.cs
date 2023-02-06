@@ -64,9 +64,9 @@ public class samich : MonoBehaviour
             NextLine();
         }
 
-        transform.Translate(Vector2.up * speed * Time.deltaTime * direction); //for the enemy to start moving 
+        transform.Translate(Vector2.up * speed * Time.deltaTime * direction); //for the item to start moving 
 
-        if (transform.position.y < startingY || transform.position.y > startingY + range) //if enemy moved to the point outside range, flip it and it goes in the other direction
+        if (transform.position.y < startingY || transform.position.y > startingY + range) 
         {
             direction *= -1; //flip
         }
