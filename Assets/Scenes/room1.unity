@@ -4861,8 +4861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6a0d10fb73ec6478dabe4989151a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedItem: {fileID: 749143400}
-  collidedItem: {fileID: 749143400}
+  selectedItem: {fileID: 0}
+  collidedItem: {fileID: 0}
   items:
   - {fileID: 0}
   - {fileID: 0}
