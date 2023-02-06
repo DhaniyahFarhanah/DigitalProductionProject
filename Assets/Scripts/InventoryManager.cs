@@ -35,7 +35,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             //Pick Up Item
             if (collidedItem != default)
@@ -60,12 +60,12 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.B))
+        if (Input.GetKeyUp(KeyCode.I))
         {
             //Open Inv
             inventory.SetActive(true);
 
-            GetComponent<Movement>().enabled = false;
+            GetComponent<move>().enabled = false;
         }
 
         if (Input.GetKeyUp(KeyCode.C))
@@ -73,7 +73,7 @@ public class InventoryManager : MonoBehaviour
             //Close Inv
             inventory.SetActive(false);
 
-            GetComponent<Movement>().enabled = true;
+            GetComponent<move>().enabled = true;
         }
 
         if (Input.GetKeyUp(KeyCode.Delete))
