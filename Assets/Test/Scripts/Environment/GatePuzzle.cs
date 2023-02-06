@@ -16,7 +16,7 @@ public class GatePuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        _button = GetComponent<Button>();
+        
     }
 
     void Update()
@@ -24,6 +24,7 @@ public class GatePuzzle : MonoBehaviour
         if (Input.GetKeyDown(key))
         {
 
+            _button.onClick.Invoke();
         }
     }
 

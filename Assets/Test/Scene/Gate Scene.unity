@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 25823515}
   - component: {fileID: 25823514}
   - component: {fileID: 25823513}
+  - component: {fileID: 25823517}
   m_Layer: 0
   m_Name: Button_TopRight
   m_TagString: Untagged
@@ -185,7 +186,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 25823514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 25823517}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25823514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,20 @@ RectTransform:
   m_AnchoredPosition: {x: 664, y: 392.8}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &25823517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25823512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 25823513}
 --- !u!1 &664582185
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +283,7 @@ GameObject:
   - component: {fileID: 664582188}
   - component: {fileID: 664582187}
   - component: {fileID: 664582186}
+  - component: {fileID: 664582190}
   m_Layer: 0
   m_Name: Button_TopFourth
   m_TagString: Untagged
@@ -306,7 +334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664582187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 664582190}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &664582187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +392,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664582185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -365,6 +405,20 @@ RectTransform:
   m_AnchoredPosition: {x: 326, y: 392.8}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &664582190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664582185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 664582186}
 --- !u!1 &717612504
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +431,7 @@ GameObject:
   - component: {fileID: 717612507}
   - component: {fileID: 717612506}
   - component: {fileID: 717612505}
+  - component: {fileID: 717612509}
   m_Layer: 0
   m_Name: Button_TopSecond
   m_TagString: Untagged
@@ -427,7 +482,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 717612506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 717612509}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &717612506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +553,20 @@ RectTransform:
   m_AnchoredPosition: {x: -344, y: 392.8}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &717612509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717612504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 717612505}
 --- !u!1 &874812150
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +579,7 @@ GameObject:
   - component: {fileID: 874812154}
   - component: {fileID: 874812153}
   - component: {fileID: 874812152}
+  - component: {fileID: 874812155}
   m_Layer: 0
   m_Name: Button_RightBot
   m_TagString: Untagged
@@ -568,7 +650,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874812153}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 874812155}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &874812153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +701,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874812150}
   m_CullTransparentMesh: 1
+--- !u!114 &874812155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874812150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 874812152}
 --- !u!1 &926887182
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +727,7 @@ GameObject:
   - component: {fileID: 926887185}
   - component: {fileID: 926887184}
   - component: {fileID: 926887183}
+  - component: {fileID: 926887187}
   m_Layer: 0
   m_Name: Button_TopMid
   m_TagString: Untagged
@@ -669,7 +778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 926887184}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 926887187}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &926887184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +849,20 @@ RectTransform:
   m_AnchoredPosition: {x: -7, y: 392.8}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926887187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926887182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 926887183}
 --- !u!1 &940233907
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5c0d69536e13d3f478df60ac6012221f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 59e1a032622fc5b49a35ba2a92710927, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -813,6 +948,7 @@ GameObject:
   - component: {fileID: 969492965}
   - component: {fileID: 969492964}
   - component: {fileID: 969492963}
+  - component: {fileID: 969492967}
   m_Layer: 0
   m_Name: Button_LeftUp
   m_TagString: Untagged
@@ -863,7 +999,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969492964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 969492967}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &969492964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +1070,20 @@ RectTransform:
   m_AnchoredPosition: {x: -658, y: 133}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &969492967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969492962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 969492963}
 --- !u!1 &1048507898
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +1096,7 @@ GameObject:
   - component: {fileID: 1048507901}
   - component: {fileID: 1048507900}
   - component: {fileID: 1048507899}
+  - component: {fileID: 1048507903}
   m_Layer: 0
   m_Name: Button_RightMid
   m_TagString: Untagged
@@ -984,7 +1147,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1048507900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048507903}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1048507900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1218,20 @@ RectTransform:
   m_AnchoredPosition: {x: 702.3, y: -125}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1048507903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048507898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 1048507899}
 --- !u!1 &1050064193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1292582287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1298,7 +1487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 59e1a032622fc5b49a35ba2a92710927, type: 3}
+  m_Texture: {fileID: 2800000, guid: 31c747f69dce62a449ce28d616357b33, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1325,6 +1514,7 @@ GameObject:
   - component: {fileID: 1655695643}
   - component: {fileID: 1655695642}
   - component: {fileID: 1655695641}
+  - component: {fileID: 1655695645}
   m_Layer: 0
   m_Name: Button_RightUp
   m_TagString: Untagged
@@ -1375,7 +1565,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1655695642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655695645}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1655695642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1636,20 @@ RectTransform:
   m_AnchoredPosition: {x: 683, y: 133}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1655695645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655695640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 1655695641}
 --- !u!1 &1775325951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1730,7 @@ GameObject:
   - component: {fileID: 1925092514}
   - component: {fileID: 1925092513}
   - component: {fileID: 1925092512}
+  - component: {fileID: 1925092516}
   m_Layer: 0
   m_Name: Button_LeftBot
   m_TagString: Untagged
@@ -1564,7 +1781,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1925092513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1925092516}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1925092513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1852,20 @@ RectTransform:
   m_AnchoredPosition: {x: -614, y: -384}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1925092516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 1925092512}
 --- !u!1 &2001753224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1878,7 @@ GameObject:
   - component: {fileID: 2001753227}
   - component: {fileID: 2001753226}
   - component: {fileID: 2001753225}
+  - component: {fileID: 2001753229}
   m_Layer: 0
   m_Name: Button_LeftMid
   m_TagString: Untagged
@@ -1685,7 +1929,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2001753226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2001753229}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001753226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,6 +2000,20 @@ RectTransform:
   m_AnchoredPosition: {x: -636.4, y: -125.2}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2001753229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001753224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 2001753225}
 --- !u!1 &2069293905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +2026,7 @@ GameObject:
   - component: {fileID: 2069293908}
   - component: {fileID: 2069293907}
   - component: {fileID: 2069293906}
+  - component: {fileID: 2069293910}
   m_Layer: 0
   m_Name: Button_TopLeft
   m_TagString: Untagged
@@ -1806,7 +2077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2069293907}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2069293910}
+        m_TargetAssemblyTypeName: GatePuzzle, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2069293907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,6 +2148,20 @@ RectTransform:
   m_AnchoredPosition: {x: -679.876, y: 392.8}
   m_SizeDelta: {x: 156.8213, y: 124.7083}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2069293910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069293905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525775188e1b7db47ab8304a8ae0a88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 122
+  _button: {fileID: 2069293906}
 --- !u!1 &2107946697
 GameObject:
   m_ObjectHideFlags: 0
