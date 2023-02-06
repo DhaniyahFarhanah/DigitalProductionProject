@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
                     i++;
                 }
 
-                items[i].GetComponent<Image>().sprite = collidedItem.GetComponent<ItemManager>().itemImage;
+                items[i].GetComponent<Image>().sprite = collidedItem.GetComponent<interactable>().itemImage;
                 allItems[items[i]] = new KeyValuePair<GameObject, bool>(allItems[items[i]].Key, false);
                 itemsToHold[i] = collidedItem;
 
@@ -68,7 +68,7 @@ public class InventoryManager : MonoBehaviour
             GetComponent<move>().enabled = false;
         }
 
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
             //Close Inv
             inventory.SetActive(false);
@@ -133,7 +133,7 @@ public class InventoryManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<ItemManager>() != default)
+        if (collision.gameObject.GetComponent<interactable>() != default)
         {
             collidedItem = collision.gameObject;
         }
@@ -141,7 +141,7 @@ public class InventoryManager : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<ItemManager>() != default)
+        if (collision.gameObject.GetComponent<interactable>() != default)
         {
             collidedItem = default;
         }

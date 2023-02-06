@@ -4,11 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class samich : MonoBehaviour
+public class interactable : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public GameObject Z;
     public TMP_Text dialogueText;
+
+    public Sprite itemImage;
 
     public string[] dialogue;
     private int index;
@@ -44,7 +46,6 @@ public class samich : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose && start == true)
         {
-            Debug.Log("Interact");
 
             if (dialoguePanel.activeInHierarchy)
             {
@@ -63,6 +64,8 @@ public class samich : MonoBehaviour
         {
             NextLine();
         }
+
+        //object movement
 
         transform.Translate(Vector2.up * speed * Time.deltaTime * direction); //for the item to start moving 
 
