@@ -2862,6 +2862,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f1ff489600bb448e1a1540723c74af5c, type: 3}
     - target: {fileID: 186444933, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186444933, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186444933, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186444933, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -2949,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 429190559642072369, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1036304139}
     - target: {fileID: 1492765451368283382, guid: 246bf361d29424ed6ae4ce04387dadd8, type: 3}
       propertyPath: m_FlipX
       value: 1

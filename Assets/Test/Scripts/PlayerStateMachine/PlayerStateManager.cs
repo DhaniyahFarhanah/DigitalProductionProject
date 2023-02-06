@@ -95,11 +95,11 @@ public class PlayerStateManager : MonoBehaviour
         if (remainingTime > 0 && remainingTime < 10 && Input.GetKey(KeyCode.X) == false)
         {
             //remainingTime = maxTime;
-            //Mathf.Clamp(remainingTime, 0, maxTime);
+            //Mathf.Clamp(remainingTime, 0, maxTime
             remainingTime += Time.deltaTime;
             Debug.Log($"{remainingTime}");
             timerBar.enabled = false;
-            //Time.timeScale = 0;s
+            timerBar.fillAmount = remainingTime / maxTime;
         }
 
         else if (remainingTime <= 0 && Input.GetKey(KeyCode.X))
@@ -136,27 +136,6 @@ public class PlayerStateManager : MonoBehaviour
                 case PlayerHoldBreathState:
                 spriteRenderer.sprite = breath;
                 charSpeed = 2f;
-
-                //if (remainingTime > 0 && Input.GetKey(KeyCode.X))
-                //{
-                //    timerBar.enabled = true;
-                //    remainingTime -= Time.deltaTime;
-                //    timerBar.fillAmount = remainingTime / maxTime;
-                //}
-
-                //if (remainingTime > 0 && Input.GetKeyUp(KeyCode.X))
-                //{
-                //    timerBar.enabled = false;
-                //    Time.timeScale = 0;
-                //}
-
-                //else if (remainingTime == 0 && Input.GetKey(KeyCode.X))
-                //{
-                //    timerBar.enabled = false;
-                //    PManager.gameOverScreen.SetActive(true);
-                //    Time.timeScale = 0;
-                //}
-
                 break;
 
                 case PlayerEyesState:
