@@ -9,6 +9,8 @@ public class PlayerStateManager : MonoBehaviour
 {
     PlayerBaseState currentState;
 
+    
+    //float playerScale;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D playerRB;
     public GameObject dialogueBox;
@@ -39,6 +41,8 @@ public class PlayerStateManager : MonoBehaviour
     public float maxTime = 1f;
     float remainingTime;
 
+    
+
     void Start()
     {
         currentState = idleState;
@@ -46,6 +50,9 @@ public class PlayerStateManager : MonoBehaviour
         timerBar = GetComponentInChildren<Image>();
         timerBar.enabled = false;
         remainingTime = maxTime;
+        //remainingTime = Mathf.Clamp(maxTime, 0f, maxTime);
+        //playerScale = player.transform.localScale.x;
+
         //PManager.GetComponent<PlayerManager>();
     }
 
@@ -60,18 +67,46 @@ public class PlayerStateManager : MonoBehaviour
 
         else
         {
-            input = Input.GetAxisRaw("Horizontal");
-
-            if (input < 0)
-            {
-                spriteRenderer.flipX = true;
-            }
-            else if (input > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
+            //input = Input.GetAxisRaw("Horizontal");
+            
+            //if (Input.GetAxisRaw("Horizontal") < 0)
+            //{
+            //    Debug.Log($"{input}");
+            //    //spriteRenderer.flipX = false;
+            //}
+            //else if (Input.GetAxisRaw("Horizontal") > 0)
+            //{
+            //    Debug.Log($"{input}");
+            //    //spriteRenderer.flipX = true;
+            //}
             currentState.UpdateState(this);
 
+
+        }
+
+        if (remainingTime > 0 && Input.GetKey(KeyCode.X))
+        {
+            timerBar.enabled = true;
+            remainingTime -= Time.deltaTime;
+            Debug.Log(remainingTime);
+            timerBar.fillAmount = remainingTime / maxTime;
+        }
+
+        if (remainingTime > 0 && remainingTime < 10 && Input.GetKey(KeyCode.X) == false)
+        {
+            //remainingTime = maxTime;
+            //Mathf.Clamp(remainingTime, 0, maxTime);
+            remainingTime += Time.deltaTime;
+            Debug.Log($"{remainingTime}");
+            timerBar.enabled = false;
+            //Time.timeScale = 0;s
+        }
+
+        else if (remainingTime <= 0 && Input.GetKey(KeyCode.X))
+        {
+            timerBar.enabled = false;
+            PManager.gameOverScreen.SetActive(true);
+            Time.timeScale = 0;
         }
 
     }
@@ -102,25 +137,25 @@ public class PlayerStateManager : MonoBehaviour
                 spriteRenderer.sprite = breath;
                 charSpeed = 2f;
 
-                if (remainingTime > 0 && Input.GetKeyDown(KeyCode.X))
-                {
-                    timerBar.enabled = true;
-                    remainingTime -= Time.deltaTime;
-                    timerBar.fillAmount = remainingTime / maxTime;
-                }
+                //if (remainingTime > 0 && Input.GetKey(KeyCode.X))
+                //{
+                //    timerBar.enabled = true;
+                //    remainingTime -= Time.deltaTime;
+                //    timerBar.fillAmount = remainingTime / maxTime;
+                //}
 
-                else if (remainingTime > 0 && Input.GetKeyUp(KeyCode.X))
-                {
-                    timerBar.enabled = false;
-                    Time.timeScale = 0;
-                }
+                //if (remainingTime > 0 && Input.GetKeyUp(KeyCode.X))
+                //{
+                //    timerBar.enabled = false;
+                //    Time.timeScale = 0;
+                //}
 
-                else if (remainingTime == 0 && Input.GetKeyDown(KeyCode.X))
-                {
-                    timerBar.enabled = false;
-                    PManager.gameOverScreen.SetActive(true);
-                    Time.timeScale = 0;
-                }
+                //else if (remainingTime == 0 && Input.GetKey(KeyCode.X))
+                //{
+                //    timerBar.enabled = false;
+                //    PManager.gameOverScreen.SetActive(true);
+                //    Time.timeScale = 0;
+                //}
 
                 break;
 
