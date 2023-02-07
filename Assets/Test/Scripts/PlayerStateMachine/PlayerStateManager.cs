@@ -50,10 +50,6 @@ public class PlayerStateManager : MonoBehaviour
         timerBar = GetComponentInChildren<Image>();
         timerBar.enabled = false;
         remainingTime = maxTime;
-        //remainingTime = Mathf.Clamp(maxTime, 0f, maxTime);
-        //playerScale = player.transform.localScale.x;
-
-        //PManager.GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -67,21 +63,7 @@ public class PlayerStateManager : MonoBehaviour
 
         else
         {
-            //input = Input.GetAxisRaw("Horizontal");
-            
-            //if (Input.GetAxisRaw("Horizontal") < 0)
-            //{
-            //    Debug.Log($"{input}");
-            //    //spriteRenderer.flipX = false;
-            //}
-            //else if (Input.GetAxisRaw("Horizontal") > 0)
-            //{
-            //    Debug.Log($"{input}");
-            //    //spriteRenderer.flipX = true;
-            //}
             currentState.UpdateState(this);
-
-
         }
 
         if (remainingTime > 0 && Input.GetKey(KeyCode.X))
@@ -94,12 +76,10 @@ public class PlayerStateManager : MonoBehaviour
 
         if (remainingTime > 0 && remainingTime < 10 && Input.GetKey(KeyCode.X) == false)
         {
-            //remainingTime = maxTime;
-            //Mathf.Clamp(remainingTime, 0, maxTime
             remainingTime += Time.deltaTime;
             Debug.Log($"{remainingTime}");
             timerBar.enabled = false;
-            timerBar.fillAmount = remainingTime / maxTime;
+            timerBar.fillAmount = maxTime;
         }
 
         else if (remainingTime <= 0 && Input.GetKey(KeyCode.X))
