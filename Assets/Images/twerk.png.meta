@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Images/twerk.png.meta
 guid: 7afc20040e7c742cb8db4f8538d7a8ca
+========
+guid: a879c54195c5e4aa8ba5f5485c0584fc
+>>>>>>>> origin/aaaaaaa:Assets/Images/chonkystonk.jpg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

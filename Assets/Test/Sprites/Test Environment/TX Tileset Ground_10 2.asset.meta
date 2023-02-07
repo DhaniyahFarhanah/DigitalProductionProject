@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Test/Sprites/Test Environment/TX Tileset Ground_10 2.asset.meta
 guid: 0af203956244c45d192eee7f69f38799
+========
+guid: 60c81fe15cfa74e6e89df9b86515819f
+>>>>>>>> origin/aaaaaaa:Assets/Test/Sprites/Test Environment/TX Tileset Ground_0 2.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
