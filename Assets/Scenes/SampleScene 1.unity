@@ -1485,22 +1485,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312474552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6a0d10fb73ec6478dabe4989151a36, type: 3}
+  m_Script: {fileID: 11500000, guid: cbbd7a33cd91a47ffaf2b561c259ce83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedItem: {fileID: 0}
-  collidedItem: {fileID: 0}
-  items:
-  - {fileID: 469812454}
-  - {fileID: 2065751746}
-  - {fileID: 89744503}
-  - {fileID: 966706218}
-  - {fileID: 232880701}
-  - {fileID: 1823217608}
-  - {fileID: 1735576395}
-  itemsToHold: []
-  inventory: {fileID: 886954486}
-  currentIndex: 0
+  speed: 10
 --- !u!212 &1312474554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1561,7 +1549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312474552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.18, y: -3.92, z: 0}
+  m_LocalPosition: {x: -0.14, y: -3.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1624,10 +1612,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312474552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38470db5842f10a42af06155df55e1a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c619f679b1fc4cc0af99f98774963da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  selectedItem: {fileID: 0}
+  collidedItem: {fileID: 0}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itemsToHold: []
+  inventory: {fileID: 886954486}
+  currentIndex: 0
 --- !u!1 &1319765743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,7 +2463,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907736691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a5b62874d622142b8f1b9dcb1cf4b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 487ca7679166145c78ac470e32469c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}

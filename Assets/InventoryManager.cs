@@ -35,7 +35,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.P))
         {
             //Pick Up Item
             if (collidedItem != default)
@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
                     i++;
                 }
 
-                items[i].GetComponent<Image>().sprite = collidedItem.GetComponent<interactable>().itemImage;
+                items[i].GetComponent<Image>().sprite = collidedItem.GetComponent<ItemManager>().itemImage;
                 allItems[items[i]] = new KeyValuePair<GameObject, bool>(allItems[items[i]].Key, false);
                 itemsToHold[i] = collidedItem;
 
@@ -60,20 +60,20 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.I))
+        if (Input.GetKeyUp(KeyCode.B))
         {
             //Open Inv
             inventory.SetActive(true);
 
-            GetComponent<move>().enabled = false;
+            GetComponent<Movement>().enabled = false;
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.C))
         {
             //Close Inv
             inventory.SetActive(false);
 
-            GetComponent<move>().enabled = true;
+            GetComponent<Movement>().enabled = true;
         }
 
         if (Input.GetKeyUp(KeyCode.Delete))
@@ -133,7 +133,7 @@ public class InventoryManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<interactable>() != default)
+        if (collision.gameObject.GetComponent<ItemManager>() != default)
         {
             collidedItem = collision.gameObject;
         }
@@ -141,7 +141,7 @@ public class InventoryManager : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<interactable>() != default)
+        if (collision.gameObject.GetComponent<ItemManager>() != default)
         {
             collidedItem = default;
         }

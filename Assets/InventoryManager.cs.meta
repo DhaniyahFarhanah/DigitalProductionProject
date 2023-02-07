@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/pausemenu.cs.meta
-guid: 5938c01c83fa3474aa5fe36fe258602d
-========
-guid: 5d6a0d10fb73ec6478dabe4989151a36
->>>>>>>> origin/aaaaaaa:Assets/Scripts/InventoryManager.cs.meta
+guid: 2c619f679b1fc4cc0af99f98774963da
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
