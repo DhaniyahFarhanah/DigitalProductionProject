@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject selectedItem;
+    [HideInInspector] public GameObject selectedItem;
 
-    public GameObject collidedItem;
+    [HideInInspector] public GameObject collidedItem;
 
     /// <summary>
     /// Actual object, highlight object and if this slot is free or not
@@ -35,7 +35,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.Z))
         {
             //Pick Up Item
             if (collidedItem != default)
@@ -60,12 +60,18 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.B))
+        if (Input.GetKeyUp(KeyCode.I))
         {
             //Open Inv
             inventory.SetActive(true);
 
-            GetComponent<Movement>().enabled = false;
+            try
+            {
+                GetComponent<Movement>().enabled = false;
+            }
+            catch (System.Exception)
+            {
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.C))
@@ -73,10 +79,16 @@ public class InventoryManager : MonoBehaviour
             //Close Inv
             inventory.SetActive(false);
 
-            GetComponent<Movement>().enabled = true;
+            try
+            {
+                GetComponent<Movement>().enabled = true;
+            }
+            catch (System.Exception)
+            {
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.Delete))
+        if (Input.GetKeyUp(KeyCode.Backspace))
         {
             //Drop item
             if (selectedItem != default)
