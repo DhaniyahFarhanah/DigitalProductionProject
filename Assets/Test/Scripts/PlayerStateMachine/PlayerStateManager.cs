@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    PlayerBaseState currentState;
+    public PlayerBaseState currentState;
 
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D playerRB;

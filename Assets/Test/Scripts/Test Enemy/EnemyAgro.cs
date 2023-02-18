@@ -9,8 +9,12 @@ public class EnemyAgro : MonoBehaviour
 
     [SerializeField] private float agroRange;
     [SerializeField] private float movespeed;
+    [SerializeField] private float killmovespeed;
 
     [SerializeField] private bool triggerAgro;
+
+    PlayerStateManager playerState;
+    [SerializeField] public GameObject playerGO;
 
     public GameObject[] Waypoints;
     int nextWayPoint = 0;
@@ -19,7 +23,11 @@ public class EnemyAgro : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite wakeUp;
     public Rigidbody2D rb2d;
-  
+
+    private void Awake()
+    {
+        playerState = player.GetComponent<PlayerStateManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -49,11 +57,12 @@ public class EnemyAgro : MonoBehaviour
         if(triggerAgro == true)
         {
             WalkOnWall();
+            KillCheck();
         }
 
         else
         {
-            //stop chasing player
+            
         }
     }
 
@@ -95,6 +104,21 @@ public class EnemyAgro : MonoBehaviour
         if(nextWayPoint == Waypoints.Length)
         {
             nextWayPoint = 0;
+        }
+    }
+
+    void KillCheck()
+    {
+        if(playerState.currentState != playerState.eyesState)
+        {
+            Debug.Log("Kill time");
+
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, killmovespeed * agroRange * Time.deltaTime);
+
+        }
+        else
+        {
+            Debug.Log("Safe");
         }
     }
 
