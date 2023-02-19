@@ -113,6 +113,7 @@ public class EnemyAgro : MonoBehaviour
         {
             Debug.Log("Kill time");
 
+
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, killmovespeed * agroRange * Time.deltaTime);
 
         }
