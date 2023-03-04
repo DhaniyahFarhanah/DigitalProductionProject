@@ -13,8 +13,8 @@ public class PlayerStateManager : MonoBehaviour
     //float playerScale;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D playerRB;
-    public GameObject dialogueBox;
-    public PlayerManager PManager;
+    //public GameObject dialogueBox;
+    //public PlayerManager PManager;
 
     public float charSpeed;
     public float dirX;
@@ -37,9 +37,9 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerBaseState twerkState;
     internal PlayerBaseState killState;
 
-    public Image timerBar;
-    public float maxTime = 1f;
-    float remainingTime;
+    //public Image timerBar;
+    //public float maxTime = 1f;
+    //float remainingTime;
 
     
 
@@ -47,47 +47,47 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState = idleState;
         currentState.EnterState(this);
-        timerBar = GetComponentInChildren<Image>();
-        timerBar.enabled = false;
-        remainingTime = maxTime;
+        //timerBar = GetComponentInChildren<Image>();
+        //timerBar.enabled = false;
+        //remainingTime = maxTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (dialogueBox.activeInHierarchy)
-        {
-            charSpeed = 0f;
+        //if (dialogueBox.activeInHierarchy)
+        //{
+        //    charSpeed = 0f;
     
-        }
+        //}
 
-        else
-        {
-            currentState.UpdateState(this);
-        }
+        //else
+        //{
+        //    currentState.UpdateState(this);
+        //}
 
-        if (remainingTime > 0 && Input.GetKey(KeyCode.X))
-        {
-            timerBar.enabled = true;
-            remainingTime -= Time.deltaTime;
-            Debug.Log(remainingTime);
-            timerBar.fillAmount = remainingTime / maxTime;
-        }
+        //if (remainingTime > 0 && Input.GetKey(KeyCode.X))
+        //{
+        //    timerBar.enabled = true;
+        //    remainingTime -= Time.deltaTime;
+        //    Debug.Log(remainingTime);
+        //    timerBar.fillAmount = remainingTime / maxTime;
+        //}
 
-        if (remainingTime > 0 && remainingTime < 10 && Input.GetKey(KeyCode.X) == false)
-        {
-            remainingTime += Time.deltaTime;
-            Debug.Log($"{remainingTime}");
-            timerBar.enabled = false;
-            timerBar.fillAmount = maxTime;
-        }
+        //if (remainingTime > 0 && remainingTime < 10 && Input.GetKey(KeyCode.X) == false)
+        //{
+        //    remainingTime += Time.deltaTime;
+        //    Debug.Log($"{remainingTime}");
+        //    timerBar.enabled = false;
+        //    timerBar.fillAmount = maxTime;
+        //}
 
-        else if (remainingTime <= 0 && Input.GetKey(KeyCode.X))
-        {
-            timerBar.enabled = false;
-            PManager.gameOverScreen.SetActive(true);
-            Time.timeScale = 0;
-        }
+        //else if (remainingTime <= 0 && Input.GetKey(KeyCode.X))
+        //{
+        //    timerBar.enabled = false;
+        //    PManager.gameOverScreen.SetActive(true);
+        //    Time.timeScale = 0;
+        //}
 
     }
 
