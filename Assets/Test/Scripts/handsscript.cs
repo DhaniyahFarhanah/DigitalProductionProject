@@ -13,11 +13,14 @@ public class handsscript : MonoBehaviour
     int pointCount;
     int direction = 1;
 
+    private bool isWaiting = false;
+
     private void Awake()
     {
         wayPoints = new Transform[path.transform.childCount];
 
-        for (int i = 0; i < path.gameObject.transform.childCount; i++) {
+        for (int i = 0; i < path.gameObject.transform.childCount; i++)
+        {
             wayPoints[i] = path.transform.GetChild(i).gameObject.transform;
         }
     }
@@ -31,25 +34,41 @@ public class handsscript : MonoBehaviour
 
     private void Update()
     {
-        var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+        if (!isWaiting) {
+            var step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
 
-        if (transform.position == targetPos) {
-            NextPoint();
+            if (transform.position == targetPos)
+            {
+                StartCoroutine(Wait());
+                NextPoint();
+            }
         }
     }
 
-    void NextPoint() {
+    IEnumerator Wait()
+    {
+        isWaiting = true;  //set the bool to stop moving
+        yield return new WaitForSeconds(3); // wait for 3 sec
+        isWaiting = false; // set the bool to start moving
+    }
 
-        if (pointIndex == pointCount - 1) {
+    void NextPoint()
+    {
+
+        if (pointIndex == pointCount - 1)
+        {
             direction = -1;
         }
 
-        if (pointIndex == 0) {
+        if (pointIndex == 0)
+        {
             direction = 1;
         }
 
         pointIndex += direction;
         targetPos = wayPoints[pointIndex].transform.position;
+
     }
 }
+
